@@ -3,23 +3,13 @@
 
 @import "{{ site.theme }}";
 
-header {
-  border-radius: 4px;
-  max-width: 230px;
-  left: calc(50% - 430px - 270px);
+header, footer {
+  display: none;
 }
 
 section {
   min-width: 100%;
   width: unset;
-}
-
-footer {
-  display: none;
-}
-
-img {
-  border-radius: inherit;
 }
 
 h2 {
@@ -33,4 +23,14 @@ li {
 }
 li:last-child {
   border-bottom: 1px solid #e5e5e5;
+}
+
+
+#mainimg {
+  float: left;
+  border-radius: 6px;
+  width: 35%;
+  height: auto;
+  margin: 20px;
+  margin-left: 10px;
 }
