@@ -4,4 +4,5 @@ plugins:
 github:
   is_user_page: false
 title: Jared Watrous
-description: Graphics, Vision, & Systems
+description: Graphics, Vision, Animation
+logo: /assets/jared.jpg

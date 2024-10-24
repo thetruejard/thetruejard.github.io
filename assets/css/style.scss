@@ -3,6 +3,10 @@
 
 @import "{{ site.theme }}";
 
+header {
+  left: calc(50% - 430px - 270px);
+}
+
 section {
   min-width: 100%;
   width: unset;
@@ -14,8 +18,8 @@ h2 {
 
 li {
   border-top: 1px solid #e5e5e5;
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 li:last-child {
   border-bottom: 1px solid #e5e5e5;
