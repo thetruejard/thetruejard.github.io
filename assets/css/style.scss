@@ -3,6 +3,20 @@
 
 @import "{{ site.theme }}";
 
-.inner {
-  max-width: 75%;
+section {
+  min-width: 100%;
+  width: unset;
+}
+
+h2 {
+  padding-top: 20px;
+}
+
+li {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+li:last-child {
+  border-bottom: 1px solid #e5e5e5;
 }
