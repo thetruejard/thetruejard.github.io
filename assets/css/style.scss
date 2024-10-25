@@ -10,6 +10,7 @@ header, footer {
 section {
   min-width: 100%;
   width: unset;
+  border: none;
 }
 
 h2 {
@@ -26,7 +27,8 @@ li:last-child {
 }
 
 .thumbnail {
-  max-height: 100px;
+  border-radius: 3px;
+  max-height: 130px;
   float: left;
   margin-top: -5px;
   margin-bottom: -5px;
