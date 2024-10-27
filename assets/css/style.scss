@@ -35,6 +35,10 @@ li:last-child {
   margin-right: 10px;
 }
 
+.narrowonly {
+  display: none;
+}
+
 .backheader {
   border-bottom: 1px solid #e5e5e5;
   width: 100%;
@@ -42,7 +46,6 @@ li:last-child {
   margin-bottom: 20px;
   padding-bottom: 10px;
 }
-
 
 #mainimg {
   float: left;
@@ -53,4 +56,13 @@ li:last-child {
   margin-left: 10px;
   margin-bottom: 20px;
   margin-right: 20px;
+}
+
+@media (max-width: 720px) {
+  .thumbnail {
+    margin-bottom: 4px;
+  }
+  .narrowonly {
+    display: block;
+  }
 }
