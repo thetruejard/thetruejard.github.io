@@ -51,6 +51,9 @@ img {
   padding-bottom: 10px;
 }
 
+#imgviewerfade {
+  display: none;  /* initial value */
+}
 #imgviewercontainer {
   object-fit: contain;
   z-index: 2;
@@ -65,7 +68,6 @@ img {
   width: 100%;
   height: 100%;
   cursor: pointer;
-  display: none;  /* initial value */
 }
 #imgviewer {
   object-fit: contain;
