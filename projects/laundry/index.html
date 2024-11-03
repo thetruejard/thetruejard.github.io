@@ -3,6 +3,7 @@ layout: default
 ---
 <body>
     <a class="backheader" href="/">&larr;&nbsp; Back to Home Page</a>
+    <div id="imgviewercontainer"><img id="imgviewer" src=""></div>
 
     <h1>"Laundry"</h1>
     <img class="fullimg" src="/projects/laundry/asleep.png" style="margin-top: 0px">
@@ -19,21 +20,29 @@ layout: default
         <li>Original soundtrack inspired by the works of Kenichiro Suehiro and Kevin Penkin</li>
         <li>All assets (textures, etc.) are CC0-licensed or made by hand without the use of generative AI</li>
     </ul>
+    <img class="fullimg" src="/projects/laundry/reading.png">
 
     <h2>Chito</h2>
     <img class="leftimg" loading="lazy" src="/projects/laundry/chito_main.png">
     <p>Chito is the main character of this animation.</p>
+    <br style="clear: both">
 
     <h2>Yuuri</h2>
     <img class="leftimg" loading="lazy" src="/projects/laundry/yuuri_main.png">
     <p>Yuuri is the other main character of the original series, but plays a minor role in this animation. Her and Chito's relationship is unclear, but they're companions who stick together through thick and thin.</p>
-    <p>Yuuri's character model is based entirely on Chito's. I only changed her facial structure, eyes, and jacket, and gave her new hair.</p>
+    <p>Yuuri's character model is based largely on Chito's. I only significantly changed her eyes, jacket, helmet, and hair.</p>
+    <br style="clear: both">
 
     <h2>Kettenkrad</h2>
     <p>Chito and Yuuri travel in a <a href="https://en.wikipedia.org/wiki/Sd.Kfz._2" target="_blank" rel="noopener noreferrer">Sd.Kfz.2 / Kleines Kettenkraftrad HK 101</a>, or "Kettenkrad," originally from 1930s-40s Germany. Apparently the author is a fan of <cite>Saving Private Ryan</cite>, which featured the same vehicle.</p>
-    <video class="fullimg" loading="lazy" controls autoplay muted loop>
+    <video class="fullimg" controls autoplay muted loop>
         <source src="/projects/laundry/kettenkrad.mp4" type="video/mp4">
     </video>
+    <video class="fullimg" controls autoplay muted loop style="margin-top: 0px">
+        <source src="/projects/laundry/kettenkrad_wheel.mp4" type="video/mp4">
+    </video>
+
+    <h2>Scene</h2>
 
     <p>This page is under construction. Check back in a few days!</p>
     <p>Last updated: 11/3/24</p>
@@ -41,3 +50,5 @@ layout: default
     
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="/assets/js/main.js"></script>
