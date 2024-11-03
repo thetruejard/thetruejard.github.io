@@ -58,6 +58,20 @@ li:last-child {
   margin-right: 20px;
 }
 
+.fullimg {
+  border-radius: 3px;
+  width: 100%;
+}
+
+.leftimg {
+  border-radius: 3px;
+  max-width: 40%;
+  float: left;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  margin-right: 10px;
+}
+
 @media (max-width: 720px) {
   .thumbnail {
     margin-bottom: 4px;
