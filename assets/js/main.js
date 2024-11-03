@@ -10,7 +10,7 @@ var stopViewingImage = function() {
 var startup = function() {
     $('#imgviewercontainer').click(stopViewingImage);
     $('img').each(function() {
-        $(this).click(viewImage)
+        $(this).click(() => { viewImage(this); })
     });
 }
 $(document).ready(startup);
