@@ -10,7 +10,9 @@ var stopViewingImage = function() {
 var startup = function() {
     $('#imgviewerfade').click(stopViewingImage);
     $('img').each(function() {
-        $(this).click(() => { viewImage(this); })
+        if (!$(this).hasClass("thumbnail")) {
+            $(this).click(() => { viewImage(this); })
+        }
     });
 }
 $(document).ready(startup);

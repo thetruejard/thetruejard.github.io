@@ -27,7 +27,7 @@ li:last-child {
 }
 
 img {
-  cursor: pointer;
+  cursor: zoom-in;
 }
 
 .thumbnail {
@@ -37,6 +37,7 @@ img {
   margin-top: -5px;
   margin-bottom: -5px;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .narrowonly {
@@ -67,10 +68,11 @@ img {
   position: fixed;
   width: 100%;
   height: 100%;
-  cursor: pointer;
+  cursor: zoom-out;
 }
 #imgviewer {
   object-fit: contain;
+  cursor: zoom-out;
 }
 
 #mainimg {
