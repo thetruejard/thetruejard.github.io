@@ -3,7 +3,7 @@ var galleryEntry = null;
 var galleryNext = function() {
     if (galleryEntry == null || !$(galleryEntry).next()[0])
         return;
-    if ($(galleryEntry).next()[0].hasClass('dummy'))
+    if ($(galleryEntry).next().hasClass('dummy'))
         return;
     viewImage($(galleryEntry).next());
 }
@@ -13,14 +13,16 @@ var galleryPrev = function() {
 }
 
 var viewImage = function(img) {
-    galleryEntry = img;
+    if ($(img).hasClass('galleryimg'))
+        galleryEntry = img;
     $('#imgviewer').attr('src', $(img).attr('src'));
     if ($('#imgviewerfade').css('display') == 'none')
         $('#imgviewerfade').fadeIn(200);
 }
 var stopViewingImage = function() {
     galleryEntry = null;
-    $('#imgviewerfade').fadeOut(200);
+    if ($('#imgviewerfade').css('display') != 'none')
+        $('#imgviewerfade').fadeOut(200);
 }
 
 var startup = function() {
@@ -31,12 +33,15 @@ var startup = function() {
         }
     });
     document.onkeydown = function(e) {
-        switch(e.code) {
+        switch(e.key) {
             case 'ArrowLeft':
                 galleryPrev();
                 break;
             case 'ArrowRight':
                 galleryNext();
+                break;
+            case 'Escape':
+                stopViewingImage();
                 break;
         }
     };
