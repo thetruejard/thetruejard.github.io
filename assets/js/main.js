@@ -1,11 +1,14 @@
 
 var galleryEntry = null;
 var galleryNext = function() {
-    if (galleryEntry == null || !$(galleryEntry).next()) return;
+    if (galleryEntry == null || !$(galleryEntry).next()[0])
+        return;
+    if ($(galleryEntry).next()[0].hasClass('dummy'))
+        return;
     viewImage($(galleryEntry).next());
 }
 var galleryPrev = function() {
-    if (galleryEntry == null || !$(galleryEntry).prev()) return;
+    if (galleryEntry == null || !$(galleryEntry).prev()[0]) return;
     viewImage($(galleryEntry).prev());
 }
 
