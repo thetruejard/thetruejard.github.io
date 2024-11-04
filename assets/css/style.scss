@@ -102,6 +102,16 @@ img {
   margin-right: 15px;
 }
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+.galleryimg {
+  margin: 5px;
+}
+
+
 @media (max-width: 720px) {
   .thumbnail {
     margin-bottom: 4px;
