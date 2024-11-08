@@ -12,6 +12,11 @@ var galleryPrev = function() {
     viewImage($(galleryEntry).prev());
 }
 
+var clickImage = function(img, e) {
+    viewImage(img);
+    if ($(img).attr('id') != 'imgviewer')
+        e.stopPropagation();
+}
 var viewImage = function(img) {
     if ($(img).hasClass('galleryimg'))
         galleryEntry = img;
@@ -61,7 +66,7 @@ var startup = function() {
     $('#imgviewerfade').click(stopViewingImage);
     $('img').each(function() {
         if (!$(this).hasClass("thumbnail")) {
-            $(this).click((e) => { viewImage(this); e.stopPropagation(); })
+            $(this).click((e) => { clickImage(this, e); })
         }
     });
     $('.dropdown').each(function() {
