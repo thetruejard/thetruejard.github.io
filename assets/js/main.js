@@ -55,14 +55,13 @@ var closeDropdown = function(dropdown, instant=false) {
     //    $(content).animate({ height: '0' }, 200);
     $(content).css('display', 'none');
     $(dropdown).data('open', 'false');
-    
 }
 
 var startup = function() {
     $('#imgviewerfade').click(stopViewingImage);
     $('img').each(function() {
         if (!$(this).hasClass("thumbnail")) {
-            $(this).click(() => { viewImage(this); })
+            $(this).click((e) => { viewImage(this); e.stopPropagation(); })
         }
     });
     $('.dropdown').each(function() {
