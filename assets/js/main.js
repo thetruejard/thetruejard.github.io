@@ -35,22 +35,27 @@ var initDropdown = function(dropdown) {
     });
 }
 var openDropdown = function(dropdown) {
+    let showhide = $(dropdown).children('ddsh').first();
     let arrow = $(dropdown).children('ddarr').first();
     let content = $(dropdown).children('.dropdowncontent').first();
+    $(showhide).html('Hide')
     $(arrow).html('&uarr;');
-    $(content).css('display', 'unset');
-    $(content).data('open', 'true');
+    $(content).css('display', 'block');
+    $(dropdown).data('open', 'true');
 }
 var closeDropdown = function(dropdown, instant=false) {
+    let showhide = $(dropdown).children('ddsh').first();
     let arrow = $(dropdown).children('ddarr').first();
     let content = $(dropdown).children('.dropdowncontent').first();
+    $(showhide).html('Show')
     $(arrow).html('&darr;');
     //if (instant)
     //    $(content).css('height', '0');
     //else
     //    $(content).animate({ height: '0' }, 200);
     $(content).css('display', 'none');
-    $(content).data('open', 'false');
+    $(dropdown).data('open', 'false');
+    
 }
 
 var startup = function() {
