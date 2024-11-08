@@ -27,7 +27,7 @@ var stopViewingImage = function() {
 
 var initDropdown = function(dropdown) {
     closeDropdown(dropdown, true);
-    $(dropdown).children('a').click(function() {
+    $(dropdown).click(function() {
         if ($(dropdown).data('open') == 'true')
             closeDropdown(this);
         else
@@ -35,21 +35,21 @@ var initDropdown = function(dropdown) {
     });
 }
 var openDropdown = function(dropdown) {
-    let arrow = $(dropdown).children('a').first();
+    let arrow = $(dropdown).children('ddarr').first();
     let content = $(dropdown).children('.dropdowncontent').first();
-    $(arrow).html('&darr;');
+    $(arrow).html('&uarr;');
     $(content).css('display', 'unset');
-    $(content).animate({ height: 'toggle' }, 200);
     $(content).data('open', 'true');
 }
 var closeDropdown = function(dropdown, instant=false) {
-    let arrow = $(dropdown).children('a').children('ddarr').first();
+    let arrow = $(dropdown).children('ddarr').first();
     let content = $(dropdown).children('.dropdowncontent').first();
-    $(arrow).html('&uarr;');
-    if (instant)
-        $(content).css('height', '0');
-    else
-        $(content).animate({ height: '0' }, 200);
+    $(arrow).html('&darr;');
+    //if (instant)
+    //    $(content).css('height', '0');
+    //else
+    //    $(content).animate({ height: '0' }, 200);
+    $(content).css('display', 'none');
     $(content).data('open', 'false');
 }
 
