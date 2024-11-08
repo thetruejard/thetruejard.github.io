@@ -25,6 +25,34 @@ var stopViewingImage = function() {
         $('#imgviewerfade').fadeOut(200);
 }
 
+var initDropdown = function(dropdown) {
+    closeDropdown(dropdown, true);
+    $(dropdown).children('a').click(function() {
+        if ($(dropdown).data('open') == 'true')
+            closeDropdown(this);
+        else
+            openDropdown(this);
+    });
+}
+var openDropdown = function(dropdown) {
+    let arrow = $(dropdown).children('a').first();
+    let content = $(dropdown).children('.dropdowncontent').first();
+    $(arrow).html('&darr;');
+    $(content).css('display', 'unset');
+    $(content).animate({ height: 'toggle' }, 200);
+    $(content).data('open', 'true');
+}
+var closeDropdown = function(dropdown, instant=false) {
+    let arrow = $(dropdown).children('a').children('ddarr').first();
+    let content = $(dropdown).children('.dropdowncontent').first();
+    $(arrow).html('&uarr;');
+    if (instant)
+        $(content).css('height', '0');
+    else
+        $(content).animate({ height: '0' }, 200);
+    $(content).data('open', 'false');
+}
+
 var startup = function() {
     $('#imgviewerfade').click(stopViewingImage);
     $('img').each(function() {
@@ -32,6 +60,9 @@ var startup = function() {
             $(this).click(() => { viewImage(this); })
         }
     });
+    $('.dropdown').each(function() {
+        initDropdown(this);
+    })
     document.onkeydown = function(e) {
         switch(e.key) {
             case 'ArrowLeft':

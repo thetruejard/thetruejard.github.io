@@ -122,6 +122,15 @@ img {
   flex-grow: 10;
 }
 
+.dropdown {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+.dropdowncontent {
+  display: none;  /* initial value */
+  height: 0;
+}
+
 
 @media (max-width: 720px) {
   .thumbnail {
