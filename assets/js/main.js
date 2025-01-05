@@ -20,7 +20,8 @@ var clickImage = function(img, e) {
 var viewImage = function(img) {
     if ($(img).hasClass('galleryimg'))
         galleryEntry = img;
-    $('#imgviewer').attr('src', $(img).attr('src'));
+    let src = $(img).attr('src').replace('.smol.', '.');
+    $('#imgviewer').attr('src', src);
     if ($('#imgviewerfade').css('display') == 'none')
         $('#imgviewerfade').fadeIn(200);
 }
