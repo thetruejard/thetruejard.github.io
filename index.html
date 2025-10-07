@@ -7,9 +7,9 @@ layout: default
     <h1>Jared Watrous</h1>
     <div>
         <img id="mainimg" src="/jared.jpg">
-        <p>I received my BA in Computer Science and Minor in Math from UC Berkeley in May 2023, and my MS in Computer Science from Stanford in June 2025. I specialize in classical and machine learning algorithms for computer graphics and vision. I'm especially interested in applications related to film, animation, and other media.</p>
-        <p>I have been working at Stanford's NeuroAILab since October 2023. My research primarily focuses on novel view synthesis and camera pose prediction using counterfactual world modeling.</p>
-        <p>I have a strong background in graphics, systems design, and AI. I also have moderate experience with game and web development. On my own time, I like to create short animated films and write music.</p>
+        <p>I received my BA in Computer Science and Minor in Math from UC Berkeley in May 2023, and my MS in Computer Science from Stanford in June 2025. I specialize in computer graphics/vision, 3D scene understanding, and related AI/ML applications.</p>
+        <p>I have worked as a Research Assistant at Stanford's NeuroAILab since October 2023, primarily focusing on 3D scene and dynamics understanding using Transformer-based deep learning. There I developed tools to collect multimodal datasets rivaling the scale of SOTA language data, and developed highly efficient inference frameworks for novel model architectures.</p>
+        <p>I have a strong background in low-level software development, systems design, and high-performance/parallel computing. I also have moderate experience with game and web development. In my free time, I like to create short animated films and write music.</p>
         <br style="clear: both">
     </div>
 
@@ -41,9 +41,23 @@ layout: default
         <thead><tr><th style="text-align: left"></th><th style="text-align: left"></th><th style="text-align: right"></th></tr></thead>
         <tbody>
             <tr>
-                <td style="text-align: left"><strong><a href="https://neuroailab.stanford.edu/index.html" target="_blank" rel="noopener noreferrer">Stanford Neuroscience and Artificial Intelligence Laboratory (NeuroAILab)</a></strong></td>
-                <td style="text-align: left">Daniel Yamins</td>
-                <td style="text-align: right">Oct 2023 - Present</td>
+                <td style="border-bottom: none; text-align: left"><strong><a href="https://neuroailab.stanford.edu/index.html" target="_blank" rel="noopener noreferrer">Stanford Neuroscience and Artificial Intelligence Laboratory (NeuroAILab)</a></strong></td>
+                <td style="border-bottom: none; text-align: left">Daniel Yamins</td>
+                <td style="border-bottom: none; text-align: right">Oct 2023 - Present</td>
+            </tr>
+            <tr>
+                <td style="text-align: left; padding-left: 12px"><strong>Research Assistant</strong>
+                    <ul class="borderless">
+                        <li>Transformer-based deep learning models for 3D scene understanding, dynamics, optical flow, depth, camera pose estimation, and image generation. Primarily using
+                            <a href="https://arxiv.org/abs/2306.01828" target="_blank" rel="noopener noreferrer">Counterfactual World Modeling</a>,
+                            <a href="https://arxiv.org/abs/2504.03875" target="_blank" rel="noopener noreferrer">Local Random Access Sequence Modeling</a>, and
+                            <a href="https://arxiv.org/abs/2509.09737" target="_blank" rel="noopener noreferrer">Probabilistic Structure Integration</a>.</li>
+                        <li>Large-scale data collection including procedurally generated 3D environments, automated scene rendering, and ethical web scraping of publicly available data, rivaling the scale of SOTA language datasets.</li>
+                        <li>Design and implementation of high-performance (batched) inference frameworks for novel model architectures</li>
+                    </ul>
+                </td>
+                <td style="text-align: left"></td>
+                <td style="text-align: right"></td>
             </tr>
         </tbody>
     </table>
@@ -89,7 +103,23 @@ layout: default
         </li>
     </ul>
 
-    <h2>Academic Papers &amp; Presentations</h2>
+    <h2>Open Source Projects</h2>
+    <ul>
+        <li>
+            PyLRAS (WIP Fall 2025)
+        </li>
+        <li>
+            <strong>Probabilistic Structure Integration</strong><br>
+            <a href="https://huggingface.co/StanfordNeuroAILab/PSI" target="_blank" rel="noopener noreferrer">Huggingface</a>
+        </li>
+        <li>
+            <strong>Pyramidal Local Patch Quantizer</strong><br>
+            <a href="https://huggingface.co/StanfordNeuroAILab/PLPQ" target="_blank" rel="noopener noreferrer">Huggingface (Source)</a> &vert;
+            <a href="https://huggingface.co/StanfordNeuroAILab/PLPQ-ImageNetOpenImages-wavelet-small-bs512-lr1e-4-l1-dinov21e0224-coarsel11e-2" target="_blank" rel="noopener noreferrer">Huggingface (Checkpoint)</a>
+        </li>
+    </ul>
+
+    <h2>Academic Projects &amp; Presentations</h2>
     <ul>
         <li>
             <strong>[Stanford CS248A] Real-Time Soft Shadows</strong><br>

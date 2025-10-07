@@ -26,6 +26,13 @@ li:last-child {
   border-bottom: 1px solid #e5e5e5;
 }
 
+ul.borderless li {
+  border-top: none;
+  border-bottom: none;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
 img {
   cursor: zoom-in;
 }
